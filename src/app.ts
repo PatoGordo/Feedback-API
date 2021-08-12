@@ -10,9 +10,7 @@ class App {
 
   public constructor() {
     this.app = express();
-    this.uri =
-      "mongodb+srv://DuckSurveys:6qGh7DzPeDk1uJKQ@patogordo.4g2iz.mongodb.net/DuckSurveys?retryWrites=true&w=majority" ||
-      (process.env.URI as string);
+    this.uri = process.env.URI as string;
 
     this.middlewares();
     this.database();
